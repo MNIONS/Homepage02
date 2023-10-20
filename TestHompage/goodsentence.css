@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap'); 
+ 
+.goodsentenceDiv{
+    background-color: white;
+    text-align: center;
+
+}
+.goodsentenceContent{
+    text-align: center;
+    font-size: 70px;
+    padding: 30px 30px 30px 30px;        
+    /* background-color: rgb(245, 245, 165); */
+    margin: 25px;
+    border-radius: 40px;
+}
+
+.goodsentenceContent02{
+    text-align: center;
+    font-size: 70px;
+    padding: 30px 30px 30px 30px;    
+}

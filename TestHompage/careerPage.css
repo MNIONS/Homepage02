@@ -1,0 +1,18 @@
+.careerPage{
+    height: 100%;
+}
+.career{
+    /* height: 100px; */
+    margin: 0 auto;
+    width: 80%;
+    top: 20px;
+    margin-top: 50px;
+}
+
+.cov{
+    overflow: hidden;
+}
+
+.fl{
+    float: left;
+}

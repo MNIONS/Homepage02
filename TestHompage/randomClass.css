@@ -1,0 +1,40 @@
+.randomClassHeader{
+    margin: 50px auto;
+    text-align: center;
+}
+.randomClassBody{
+    margin: 15px auto;
+    text-align: center;
+    width: 100%;
+}
+.randomClassBodyDiv{
+    width: 100%;
+    overflow: hidden;
+    margin: 15px auto;
+}
+/* .pNumDiv{
+    float: left;
+} */
+
+.randomClassBtn{
+    background-color: lightpink;
+    color: white;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 35px;
+    font-size: 20px;
+    padding: 8px; 
+}
+.rowTable{
+    overflow: hidden;
+    background-color: rgb(210, 173, 252);
+    color: white;
+    width: fit-content;
+    margin: 10px auto;
+    border-radius: 35px;
+    font-size: 20px;
+    padding: 10px 20px; 
+}
+.cellTable{
+    float: left;
+}
