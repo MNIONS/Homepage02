@@ -391,12 +391,13 @@ body{
         overflow: hidden;
     }
     .imgDiv{
-        width: 50%;
+        width: 300px;
         float: left;
-        justify-content: center;
+        /* justify-content: center; */
         padding: 10px 10px 10px 10px;
         text-align: center;
         position: relative;
+        height: 250px;
     }
     .imgDiv > .mainImage{
         width: 100%;
