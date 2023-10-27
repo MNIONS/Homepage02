@@ -1,469 +1,379 @@
-html{
-    width: 100%;
-    padding: 10px 10px 10px 10px;
-}
-body{
-    display: block;
-}
+
+*{padding:0;margin:0}
+li{list-style:none}
+a{text-decoration:none;font-size:14px}
+
 /* ------------------------------------- */
 /* desktop 규격 */
 /* ------------------------------------- */
-@media screen and (min-width: 795px){    
+@media screen and (min-width: 796px){    
     body{
-        background-color: aqua;
+        width: 100%;       
+        background-color: rgb(186, 219, 248); 
     }
-    .headermMasterDiv1{
-        display: block;
-        height: 17%;
-        margin: 10px 10px 10px 10px;      
-        overflow: hidden;  
+    .HeaderMasterDiv{
+        width: 100%;
+        height: 170px;
+        /* position: absolute; */
+        font-family: "Agbalumo", sans-serif;
     }
-    .hedaerDetailDiv1{
-        float: left;
-        font-size: 35px; 
+    .HeaderDiv{
+        width: 100%;
+        font-size: 50px;
+        text-align: center;
+        font-weight: bolder;
+        margin: 30px 0px 30px 00px;
     }
-    .hedaerDetailDiv2{
-        font-size: 20px; 
-        float: right;
+    .menu {
+        width: 100%;
         overflow: hidden;
+        position: absolute;
+    }      
+    .menu > li {
+      width: 20%;
+      text-align: center;
+      line-height: 40px;
+      background-color: #5778ff;
+      float: left;
+      color: white;
+    }    
+    .menu a {
+      color: #fff;
+    }    
+    .submenu > li {
+      line-height: 50px;
+      background-color: #94a9ff;
+    }    
+    .submenu {
+      height: 0; /*ul의 높이를 안보이게 처리*/
+      overflow: hidden;
     }
-    .hedaerDetailDiv2 > div{
-        float: left;
-        padding: 10px 10px 10px 10px;
+    .menu > li:hover {
+      background-color: #94a9ff;
+      transition-duration: 0.5s;
+    }    
+    .menu > li:hover .submenu {
+      height: auto; 
+      transition-duration: 1s;
     }
-    .hedaerDetailDiv2 > div:hover{        
-        color: orange;
-    }
-    .headermMasterDiv2{
+    .submenu > li > div:hover{
+        color: black;
+    }    
+    .HeaderMasterDiv > div:nth-of-type(1){        
+        display: block;
+    }    
+    .HeaderMasterDiv > div:nth-of-type(2){        
         display: none;
     }
-    .bodyMasterDiv{
-        height: 80%;
-        position: relative;
+    .contentDivMaster{
+        width: 1600px;
+        top: 170px;
+        height: calc(100%-200px);
+        /* position: absolute; */
+        margin: 25px 0px 0px 25px;
     }
-    .goolgeDiv{
+    .gooleDiv{
         text-align: center;
-        padding: 10px 0px;
-        height: 5%;
-        display: flex;
+        margin-bottom: 15px;
+    }
+    .gooleDiv > .sform > span{
         font-size: 30px;
-        overflow: hidden;
-        justify-content: center;
+        font-family: "Agbalumo", sans-serif;
     }
-    .goolgeDiv > form{
-        overflow: hidden;
-        box-sizing: border-box;
-        width: 100%;
-        justify-content: center;
-        display: flex;
+    .gooleDiv > .sform > span:nth-of-type(1){
+        color: blue;
     }
-    .goolgeDiv > form > span{
-        margin: 0px 10px;
-        float: left;
+    .gooleDiv > .sform > span:nth-of-type(2){
+        color: red;
     }
-    .goolgeDiv >  form > input{
-        border-radius: 10px;
-        width: 35%;
-        float: left;
+    .gooleDiv > .sform > span:nth-of-type(3){
+        color: yellow;
     }
-    .videoDiv{
-        text-align: center;
-        margin: 0 auto;
-        height: 10%;
+    .gooleDiv > .sform > span:nth-of-type(4){
+        color: blue;
     }
-    .cardMasterDiv{
-        height: 450px;
+    .gooleDiv > .sform > span:nth-of-type(5){
+        color: green;
     }
-    .cardMaster{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }.cardMaster .card{
-        position: absolute;
-        width: 240px;
-        height: 320px;
-        border-radius: 8px;
-        background: #5e5cfc;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: rgba(0, 0, 0, 0.2);
-        font-size: 8em;
-        font-weight: 700;
-        border: 10px solid rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: 0.5s;
-        transform-origin: 50% 100%;
-        filter: hue-rotate(calc(var(--i) * 65deg));
-        box-shadow: 0 15pc 50px rgba(0, 0, 0, 0.1);
-    }    
-    .cardMaster:hover .card{
-        transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) * 120px),-50px);
-        color: rgba(0, 0, 0, 0.25);
-        box-shadow: 0 15pc 50px rgba(0, 0, 0, 0.3);
+    .gooleDiv > .sform > span:nth-of-type(6){
+        color: red;
     }
-    .cardMaster:active .card{
-        background: #333;
-    
-    }
-    .cardMaster .card:active{
-        translate: calc(var(--i)*20px) -50px;
-        z-index: 100;
-        background: #5e5cfc;
-    }
-    .sliedDivMaster {
-        position: relative;
-        overflow: hidden;        
-        width: 600px;
-        height: 400px;
-        margin: 0 auto;
-    }
-    
-    .sliedImageDiv {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-    
-      animation: slider 7.5s infinite linear;
-    }
-    
-    .sliedImageDiv:nth-child(1) {
-      background-image: url(image01.jpg);
-      animation-delay: 0;
-    }
-    .sliedImageDiv:nth-child(2) {
-      background-image: url(image03.jpg);
-      animation-delay: -2.5s;
-    }
-    .sliedImageDiv:nth-child(3) {
-      background-image: url(image04.jpg);
-      animation-delay: -5s;
-    }
-    @keyframes slider {
-      0% {
-        transform: translateX(0);
-      }
-    
-      26% {
-        transform: translateX(0);
-      }
-      33% {
-        transform: translateX(-100%);
-        animation-timing-function: step-end;
-      }
-      93% {
-        transform: translateX(100%);
-      }
-    
-      100% {
-        transform: translateX(0);
-      }
-    }      
-
-    .imgArrayDiv{
-        height: 80%;
-        width: 100%;
-        overflow: hidden;
-    }
-    .imgDiv{
-        width: 30%;
-        float: left;
-        justify-content: center;
-        padding: 10px 10px 10px 10px;
-        text-align: center;
-        position: relative;
-    }
-    .imgDiv > .mainImage{
-        width: 100%;
-        border-radius:15px;
-        box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
-    }
-    .imgDiv > .bookMarkImage{
-        width: 30px;
-        right: 25px;
-        top: 15px;
-        position: absolute;
-    }
-    .imageName{
+    .gooleDiv > .sform > input{
         font-size: 30px;
-        font-weight: 500;
-        margin-top: 10px;
+        margin-left: 15px;
+        border-radius: 13px;
     }
-    .explanation{
+    .textContentMaster{
+        margin: 0 auto;
+        width: 900px;
+        text-align: center;
+    }
+    .textContentDiv{
+        width: 900px;
+        height: 522px;
+        background-image: url(mainHome.jpg);
+        background-size: cover;
+        color: white;
+        padding: 25px;
+    }
+    .textContentDiv >div:nth-of-type(1){
+        font-size: 45px;
+        margin-bottom: 5px;
+    }
+    .textContentDiv >div:nth-of-type(2){
+        font-size: 40px;
+        font-family: "Agbalumo", sans-serif;
+        margin-bottom: 25px;
+    }
+    .textContentDiv >div:nth-of-type(3){
         font-size: 20px;
-        margin-top: 10px;
     }
-    .imgDiv:hover > .mainImage{
+    .imageArrayMst{
         width: 100%;
-        border-radius:15px;
-        box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        margin-top: 15px;
+        justify-items: center;
     }
-    .imgDiv:hover > .bookMarkImage{
-        width: 30px;
-        right: 25px;
-        top: 15px;
-        position: absolute;
-        content: url(bookMark02.png);
+    .imageArray{
+        margin-right: 10px;        
+        margin-bottom: 10px;
+        display: contents;
     }
-    .footerMsterDiv{
+    .imageArray > img{
+        width: 500px;
+    }
+    .footerDiv{
         width: 100%;
-        height: calc(100%-96%);
+        height: 30px;
         bottom: 0px;
-        background-color: rgb(170, 168, 168);
+        background-color: rgb(124, 122, 122);
         text-align: center;
+        color: white;
+        /* position: absolute; */
     }
 }
-
 /* ------------------------------------- */
 /* tablet 규격 */
 /* ------------------------------------- */
-@media screen and (max-width: 797px)and (min-width: 699px){
+@media screen and (max-width: 795px)and (min-width: 699px){
     body{
-        background-color:beige;
-    }    
-    .headermMasterDiv1{
-        display: block;
-        height: 17%;
-        margin: 10px 10px 10px 10px;      
-        overflow: hidden;  
+        width: 795px;       
+        background-color: rgb(164, 248, 209); 
     }
-    .hedaerDetailDiv1{
-        float: left;
-        font-size: 35px; 
+    .HeaderMasterDiv{
+        width: 100%;
+        height: 170px;
+        /* position: absolute; */
     }
-    .hedaerDetailDiv2{
-        font-size: 20px; 
-        float: right;
+    .HeaderDiv{
+        width: 100%;
+        font-size: 50px;
+        text-align: center;
+        font-weight: bolder;
+        margin: 30px 0px 30px 00px;
+    }
+    .menu {
+        width: 100%;
         overflow: hidden;
+        position: absolute;
+    }      
+    .menu > li {
+      width: 20%;
+      text-align: center;
+      line-height: 40px;
+      background-color: #5778ff;
+      float: left;
+      color: white;
+    }    
+    .menu a {
+      color: #fff;
+    }    
+    .submenu > li {
+      line-height: 50px;
+      background-color: #94a9ff;
+    }    
+    .submenu {
+      height: 0; /*ul의 높이를 안보이게 처리*/
+      overflow: hidden;
     }
-    .hedaerDetailDiv2 > div{
-        float: left;
-        padding: 10px 10px 10px 10px;
+    .menu > li:hover {
+      background-color: #94a9ff;
+      transition-duration: 0.5s;
+    }    
+    .menu > li:hover .submenu {
+      height: auto; 
+      transition-duration: 1s;
     }
-    .hedaerDetailDiv2 > div:hover{        
-        color: orange;
+    .submenu > li > div:hover{
+        color: black;
     }
-    .headermMasterDiv2{
+    .HeaderMasterDiv > div:nth-of-type(1){        
+        display: block;
+    }    
+    .HeaderMasterDiv > div:nth-of-type(2){        
         display: none;
     }
-    .bodyMasterDiv{
-        height: 80%;
-        position: relative;
+    .contentDivMaster{
+        width: 100%;
+        top: 170px;
+        height: calc(100%-200px);
+        /* position: absolute; */
+        margin: 25px 0px 0px 25px;
     }
-    .goolgeDiv{
+    .gooleDiv{
         text-align: center;
-        padding: 10px 0px;
-        height: 5%;
-        display: flex;
-        font-size: 20px;
-        overflow: hidden;
-        justify-content: center;
+        margin-bottom: 15px;
     }
-    .goolgeDiv > form{
-        overflow: hidden;
-        box-sizing: border-box;
-        width: 100%;
-        justify-content: center;
-        display: flex;
-    }
-    .goolgeDiv > form > span{
-        margin: 0px 10px;
-        float: left;
-    }
-    .goolgeDiv >  form > input{
-        border-radius: 10px;
-        width: 35%;
-        float: left;
-    }
-    .videoDiv{
-        text-align: center;
-        margin: 0 auto;
-        height: 10%;
-    }
-    .cardMasterDiv{
-        height: 330px;
-    }
-    .cardMaster{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .cardMaster .card{
-        position: absolute;
-        width: 200px;
-        height: 260px;
-        border-radius: 8px;
-        background: #5e5cfc;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: rgba(0, 0, 0, 0.2);
-        font-size: 8em;
-        font-weight: 700;
-        border: 10px solid rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: 1s;
-        transform-origin: 50% 100%;
-        filter: hue-rotate(calc(var(--i) * 65deg));
-        box-shadow: 0 15pc 50px rgba(0, 0, 0, 0.1);
-    }
-    
-    .cardMaster:hover .card{
-        transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) * 120px),-50px);
-        color: rgba(0, 0, 0, 0.25);
-        box-shadow: 0 15pc 50px rgba(0, 0, 0, 0.3);
-    }
-    .cardMaster:active .card{
-        background: #333;
-    
-    }
-    .cardMaster .card:active{
-        translate: calc(var(--i)*20px) -50px;
-        z-index: 100;
-        background: #5e5cfc;
-    }
-    
-    .sliedDivMaster {
-        position: relative;
-        overflow: hidden;        
-        width: 600px;
-        height: 400px;
-        margin: 0 auto;
-    }
-    
-    .sliedImageDiv {
-       position: absolute;
-       top: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       background-size: cover;
-       background-position: center;
-     
-       animation: slider 7.5s infinite linear;
-    }
-    
-    .sliedImageDiv:nth-child(1) {
-      background-image: url(image01.jpg);
-      animation-delay: 0;
-    }
-    .sliedImageDiv:nth-child(2) {
-      background-image: url(image03.jpg);
-      animation-delay: -2.5s;
-    }
-    .sliedImageDiv:nth-child(3) {
-      background-image: url(image04.jpg);
-      animation-delay: -5s;
-    }
-    @keyframes slider {
-      0% {
-        transform: translateX(0);
-      }
-    
-      26% {
-        transform: translateX(0);
-      }
-      33% {
-        transform: translateX(-100%);
-        animation-timing-function: step-end;
-      }
-      93% {
-        transform: translateX(100%);
-      }
-    
-      100% {
-        transform: translateX(0);
-      }
-    }  
-    .imgArrayDiv{
-        height: 80%;
-        width: 100%;
-        overflow: hidden;
-    }
-    .imgDiv{
-        width: 300px;
-        float: left;
-        /* justify-content: center; */
-        padding: 10px 10px 10px 10px;
-        text-align: center;
-        position: relative;
-        height: 250px;
-    }
-    .imgDiv > .mainImage{
-        width: 100%;
-        border-radius:15px;
-    }
-    .imgDiv > .bookMarkImage{
-        width: 30px;
-        right: 25px;
-        top: 15px;
-        position: absolute;
-    }
-    .imgDiv:hover > .bookMarkImage{
-        width: 30px;
-        right: 25px;
-        top: 15px;
-        position: absolute;
-        content: url(bookMark02.png);
-    }    
-    .imageName{
+    .gooleDiv > .sform > span{
         font-size: 30px;
-        font-weight: 500;
-        margin-top: 10px;
+        font-family: "Agbalumo", sans-serif;
     }
-    .explanation{
-        font-size: 20px;
-        margin-top: 10px;
+    .gooleDiv > .sform > span:nth-of-type(1){
+        color: blue;
     }
-    .footerMsterDiv{
+    .gooleDiv > .sform > span:nth-of-type(2){
+        color: red;
+    }
+    .gooleDiv > .sform > span:nth-of-type(3){
+        color: yellow;
+    }
+    .gooleDiv > .sform > span:nth-of-type(4){
+        color: blue;
+    }
+    .gooleDiv > .sform > span:nth-of-type(5){
+        color: green;
+    }
+    .gooleDiv > .sform > span:nth-of-type(6){
+        color: red;
+    }
+    .gooleDiv > .sform > input{
+        font-size: 30px;
+        margin-left: 15px;
+        border-radius: 13px;
+    }    
+    .textContentMaster{
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        width: 720px;
+    }
+    .textContentDiv{
+        background-image: url(mainHome.jpg);
+        background-size: cover;
+        color: white;
+        padding: 25px;
+    }
+    .textContentDiv >div:nth-of-type(1){
+        font-size: 38px;
+        margin-bottom: 5px;
+    }
+    .textContentDiv >div:nth-of-type(2){
+        font-size: 40px;
+        font-family: "Agbalumo", sans-serif;
+        margin-bottom: 20px;
+    }
+    .textContentDiv >div:nth-of-type(3){
+        font-size: 15px;
+    }
+    .imageArrayMst{
         width: 100%;
-        height: calc(100%-97%);
-        bottom: 0px;
-        background-color: rgb(97, 97, 97);
+        overflow: hidden;
+        margin-top: 15px;
+        justify-items: center;
     }
+    .imageArray{
+        width: 300px;
+        display: contents;
+    }
+    .imageArray > img{
+        width: 300px;
+    }
+    .footerDiv{
+        width: 100%;
+        height: 30px;
+        bottom: 0px;
+        background-color: rgb(124, 122, 122);
+        text-align: center;
+        color: white;
+    }
+
 }
+
 /* ------------------------------------- */
 /* mobile 규격 */
 /* ------------------------------------- */
 @media screen and (max-width: 698px){
     body{
-        background-color:cornflowerblue;
+        width: 698px;       
+        background-color: rgb(238, 247, 156); 
+    }
+    .HeaderMasterDiv{
+        width: 100%;
+        height: 170px;
+        /* position: absolute; */
+    }
+    .HeaderDiv{
+        width: 100%;
+        font-size: 50px;
+        text-align: center;
+        font-weight: bolder;
+        margin: 30px 0px 30px 00px;
+    }
+    .menu {
+        width: 100%;
+        overflow: hidden;
+    }      
+    .menu > li {
+      width: 20%;
+      text-align: center;
+      line-height: 40px;
+      background-color: #5778ff;
+      float: left;
+      color: white;
     }    
-    .headermMasterDiv1{
+    .menu a {
+      color: #fff;
+    }    
+    .submenu > li {
+      line-height: 50px;
+      background-color: #94a9ff;
+    }    
+    .submenu {
+      height: 0; /*ul의 높이를 안보이게 처리*/
+      overflow: hidden;
+    }
+    .menu > li:hover {
+      background-color: #94a9ff;
+      transition-duration: 0.5s;
+    }    
+    .menu > li:hover .submenu {
+      height: auto; 
+      transition-duration: 1s;
+    }
+    .submenu > li > div:hover{
+        color: black;
+    }
+    .HeaderMasterDiv > div:nth-of-type(1){        
         display: none;
-        height: 17%;
-        margin: 10px 10px 10px 10px;      
-        overflow: hidden;  
-    }
-    .hedaerDetailDiv3{
-        float: left;
-        font-size: 35px; 
-    }
-    .headermMasterDiv2{
+    }    
+    .HeaderMasterDiv > div:nth-of-type(2){        
         display: block;
-        height: 17%;
-        margin: 10px 10px 10px 10px;      
-        overflow: hidden;  
+    }    
+    .HeaderUlMaster > li{        
+        display: block;
+        background-color: #5778ff;
+        overflow: hidden;
+        justify-content: center;
     }
-    .hedaerDetailDiv4{
+    .mobileHeaderDiv{
         float: right;
         width: 40px;
         height: 20px;
         right: 10px;
-        top: 35px;
         position: absolute;
+        margin-top: 10px;
     }
-    .hedaerDetailDiv4 > div{
+    .mobileHeaderDiv > div{
         position: absolute;
         left: 0;
         width: 100%;
@@ -474,201 +384,150 @@ body{
         transition : all .4s;
         box-sizing : border-box;
     }
-    .hedaerDetailDiv4:hover > div{
+    .mobileHeaderDiv:hover > div{
         border-radius : 50%;
         border : 4px solid transparent;
         transition : all .75s;
     }
-    .hedaerDetailDiv4:hover > div:nth-of-type(1){        
+    .mobileHeaderDiv:hover > div:nth-of-type(1){        
         /* -webkit-transform: translateY (10px) rotate (-45deg);
         transform: translateY(10px) rotate(-45deg); */
         -webkit-transform: translateY (10px) rotate (-615deg);
         transform: translateY(10px) rotate(-315deg);
     }
-    .hedaerDetailDiv4:hover > div:nth-of-type(2){        
+    .mobileHeaderDiv:hover > div:nth-of-type(2){        
         opacity: 0;
     }
-    .hedaerDetailDiv4:hover > div:nth-of-type(3){    
+    .mobileHeaderDiv:hover > div:nth-of-type(3){    
         /* -webkit-transform: translateY(-10px) rotate(45deg);
         transform: translateY(-10px) rotate(45deg); */
         -webkit-transform: translateY(-10px) rotate(315deg);
         transform: translateY(-10px) rotate(315deg);
     }
-    .bodyMasterDiv{
-        height: 80%;
-        position: relative;
-    }
-    .goolgeDiv{
-        text-align: center;
-        padding: 10px 0px;
-        height: 5%;
-        display: flex;
-        font-size: 20px;
-        overflow: hidden;
-        justify-content: center;
-    }
-    .goolgeDiv > form{
-        overflow: hidden;
-        box-sizing: border-box;
-        width: 100%;
-        justify-content: center;
-        display: flex;
-    }
-    .goolgeDiv > form > span{
-        margin: 0px 10px;
+    .choisMenu{
+        margin-left: 20px;
+        font-size: 25px;
         float: left;
+        justify-content: center;
     }
-    .goolgeDiv >  form > input{
-        border-radius: 10px;
-        width: 35%;
-        float: left;
+    .mobileHeaderDiv02{
+        margin-left: 35px;   
+        display: block;
     }
-    .videoDiv{
+    .HeaderUlMaster{
+        /* position: relative; */
+        width: 100%;
+    }
+    .HeaderUlMaster > li:nth-of-type(1){
+        height: 50px;
+    }
+    .HeaderUlMaster > li:nth-of-type(2){
+        display: none;
+    }
+    .mobileHeaderDiv:hover + .HeaderUlMaster > li:nth-of-type(2){  
+        display: block;
+    }
+    .mobileHeaderDiv:hover + .mobileHeaderDiv02{        
+        margin-left: 35px;   
+        display: block;
+    }
+    .mobileHeaderDiv:hover > .mobileHeaderDiv02{
+        display: block;        
+    }
+    .mobileSub{
+        margin-left: 20px;        
+        display: none;
+    }
+    .mobileHeaderDiv02 > ul > li{
+        line-height: 30px;
+    }
+    .mobileHeaderDiv02 > ul > li:hover > .mobileSub{
+        display: block;
+    }
+
+    .contentDivMaster{
+        width: 100%;
+        top: 170px;
+        height: calc(100%-200px);
+        /* position: absolute; */
+        margin: 25px 0px 0px 25px;
+    }
+    .gooleDiv{
         text-align: center;
-        margin: 0 auto;
-        height: 10%;
+        margin-bottom: 15px;
     }
-    .cardMasterDiv{
-        height: 450px;
-    }
-    .cardMaster{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .cardMaster .card{
-        position: absolute;
-        width: 180px;
-        height: 240px;
-        border-radius: 8px;
-        background: #5e5cfc;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: rgba(0, 0, 0, 0.2);
-        font-size: 6em;
-        font-weight: 700;
-        border: 10px solid rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: 0.5s;
-        transform-origin: 50% 100%;
-        filter: hue-rotate(calc(var(--i) * 45deg));
-        box-shadow: 0 15pc 50px rgba(0, 0, 0, 0.1);
-    }    
-    .cardMaster:hover .card{
-        transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) * 120px),-50px);
-        color: rgba(0, 0, 0, 0.25);
-        box-shadow: 0 15pc 50px rgba(0, 0, 0, 0.3);
-    }
-    .cardMaster:active .card{
-        background: #333;    
-    }
-    .cardMaster .card:active{
-        translate: calc(var(--i)*20px) -50px;
-        z-index: 100;
-        background: #5e5cfc;
-    }
-    
-    
-    .sliedDivMaster {
-        position: relative;
-        overflow: hidden;        
-        width: 480px;
-        height: 320px;
-        margin: 0 auto;
-    }
-    
-    .sliedImageDiv {
-       position: absolute;
-       top: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       background-size: cover;
-       background-position: center;
-     
-       animation: slider 7.5s infinite linear;
-    }
-    
-    .sliedImageDiv:nth-child(1) {
-      background-image: url(image01.jpg);
-      animation-delay: 0;
-    }
-    .sliedImageDiv:nth-child(2) {
-      background-image: url(image03.jpg);
-      animation-delay: -2.5s;
-    }
-    .sliedImageDiv:nth-child(3) {
-      background-image: url(image04.jpg);
-      animation-delay: -5s;
-    }
-    @keyframes slider {
-      0% {
-        transform: translateX(0);
-      }
-    
-      26% {
-        transform: translateX(0);
-      }
-      33% {
-        transform: translateX(-100%);
-        animation-timing-function: step-end;
-      }
-      93% {
-        transform: translateX(100%);
-      }
-    
-      100% {
-        transform: translateX(0);
-      }
-    }  
-    .imgArrayDiv{
-        height: 80%;
-        width: 100%;
-        overflow: hidden;
-    }
-    .imgDiv{
-        width: 95%;
-        /* float: left; */
-        justify-content: center;
-        padding: 10px 10px 10px 10px;
-        text-align: center;
-        position: relative;
-    }
-    .imgDiv > .mainImage{
-        width: 100%;
-        border-radius:15px;
-    }
-    .imgDiv > .bookMarkImage{
-        width: 30px;
-        right: 25px;
-        top: 15px;
-        position: absolute;
-    }
-    .imgDiv:hover > .bookMarkImage{
-        width: 30px;
-        right: 25px;
-        top: 15px;
-        position: absolute;
-        content: url(bookMark02.png);
-    }    
-    .imageName{
+    .gooleDiv > .sform > span{
         font-size: 30px;
-        font-weight: 500;
-        margin-top: 10px;
+        font-family: "Agbalumo", sans-serif;
     }
-    .explanation{
-        font-size: 20px;
-        margin-top: 10px;
+    .gooleDiv > .sform > span:nth-of-type(1){
+        color: blue;
     }
-    .footerMsterDiv{
+    .gooleDiv > .sform > span:nth-of-type(2){
+        color: red;
+    }
+    .gooleDiv > .sform > span:nth-of-type(3){
+        color: yellow;
+    }
+    .gooleDiv > .sform > span:nth-of-type(4){
+        color: blue;
+    }
+    .gooleDiv > .sform > span:nth-of-type(5){
+        color: green;
+    }
+    .gooleDiv > .sform > span:nth-of-type(6){
+        color: red;
+    }
+    .gooleDiv > .sform > input{
+        font-size: 30px;
+        margin-left: 15px;
+        border-radius: 13px;
+    }
+
+    .textContentMaster{
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        width: 600px;
+    }
+    .textContentDiv{
+        background-image: url(mainHome.jpg);
+        background-size: cover;
+        color: white;
+        padding: 25px;
+    }
+    .textContentDiv >div:nth-of-type(1){
+        font-size: 38px;
+        margin-bottom: 5px;
+    }
+    .textContentDiv >div:nth-of-type(2){
+        font-size: 40px;
+        font-family: "Agbalumo", sans-serif;
+        margin-bottom: 20px;
+    }
+    .textContentDiv >div:nth-of-type(3){
+        font-size: 15px;
+    }
+    .imageArrayMst{
         width: 100%;
-        height: calc(100%-97%);
-        bottom: 0px;
-        background-color: rgb(97, 97, 97);
+        overflow: hidden;
+        margin-top: 15px;
+        display: grid;
+        justify-items: center;
     }
-    
+    .imageArray{
+        margin-right: 10px;        
+        margin-bottom: 10px;
+    }
+    .imageArray > img{
+        width: 500px;
+    }
+    .footerDiv{
+        width: 100%;
+        height: 30px;
+        bottom: 0px;
+        background-color: rgb(124, 122, 122);
+        text-align: center;
+        color: white;
+    }
 }
