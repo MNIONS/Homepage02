@@ -130,18 +130,186 @@ a{text-decoration:none;font-size:14px}
     }
     .imageArrayMst{
         width: 100%;
+        margin-top: 25px;
+        margin-left: 100px;
         overflow: hidden;
-        margin-top: 15px;
-        justify-items: center;
+        text-align: center;
+        position: relative;
+        height: 1450px;        
     }
     .imageArray{
         margin-right: 10px;        
         margin-bottom: 10px;
-        display: contents;
+        width: 600px;
+        height: 450px;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 35px;
+        border: 1px solid black;
+        background-color: rgb(247, 248, 244);
+    }    
+    .imageArrayMst >div:nth-of-type(1){
+        left: 0px;
+        position: absolute;
     }
-    .imageArray > img{
+    .imageArrayMst >div:nth-of-type(2){
+        position: absolute;
+        left: 700px;
+    }
+    .imageArrayMst >div:nth-of-type(3){
+        position: absolute;
+        left: 0px;
+        top: 470px;
+    }
+    .imageArrayMst >div:nth-of-type(4){
+        position: absolute;
+        left: 700px;
+        top: 470px;
+    }
+    .imageArrayMst >div:nth-of-type(5){
+        position: absolute;
+        left: 0px;
+        top: 940px;
+    }
+    .imageArrayMst >div:nth-of-type(6){
+        position: absolute;
+        left: 700px;
+        top: 940px;
+    }
+    .bookMarkImage{
+        width: 30px;
+        right: 80px;
+        top: 15px;
+        position: absolute;
+    }
+    .imageArray:hover > .bookMarkImage{
+        width: 30px;
+        right: 80px;
+        top: 15px;
+        position: absolute;
+        content: url(bookMark02.png);
+    }
+    .arrayImage{
         width: 500px;
+        margin-top: 10px;
+        border-radius: 15px;
     }
+    .imgTitle{
+        font-weight: bold;
+        font-size: 22px;
+    }
+    .imgsubTitle{
+        padding: 8px 15px 0 15px;        
+    }
+    .animationMst{
+        font-size: 25px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .anTitle{
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .animationDtl{
+        justify-content: center;
+    }
+    .box {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        background-color: rgba(255, 255, 0, 0.7);
+        animation: box-ani 1s infinite; 
+        margin: 0 auto;
+    }    
+    .cardMasterDiv{
+        height: 450px;
+    }
+    .cardMaster{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cardMaster .card{
+        position: absolute;
+        width: 240px;
+        height: 320px;
+        border-radius: 8px;
+        background: #5e5cfc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.2);
+        font-size: 8em;
+        font-weight: 700;
+        border: 10px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s;
+        transform-origin: 50% 100%;
+        filter: hue-rotate(calc(var(--i) * 65deg));
+        box-shadow: 0 15pc 50px rgba(0, 0, 0, 0.1);
+    }    
+    .cardMaster:hover .card{
+        transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) * 120px),-50px);
+        color: rgba(0, 0, 0, 0.25);
+        box-shadow: 0 15pc 50px rgba(0, 0, 0, 0.3);
+    }
+    .cardMaster:active .card{
+        background: #333;    
+    }
+    .cardMaster .card:active{
+        translate: calc(var(--i)*20px) -50px;
+        z-index: 100;
+        background: #5e5cfc;
+    }
+    @keyframes box-ani {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(50px, 50px); }
+    }
+    .loading{
+        width: 162px;
+        height: 162px;
+        border: 1px solid black;
+        margin:  0 auto;
+    }
+    .loading__item::before{
+        content: "";
+        width: 50px;
+        height: 50px;
+        background-color: rgb(245, 124, 180);
+        display: inline-block;
+        position:relative;
+        animation: loading 2s infinite cubic-bezier(0, 0, 0.04, 1.21);
+    }
+    @keyframes loading{
+        0%{
+            left: 0;
+            top: 0;
+        }
+        20%{
+            left: 110px;
+            top: 0;
+        }
+        40%{
+            left:0;
+            top: 110px;
+        }
+        60%{
+            left: 110px;
+            top: 110px;
+        }
+        80%{
+            left: 50px;
+            top: 50px;
+        }
+        100%{
+            left: 0;
+            top: 0;
+        }
+    }
+    
     .footerDiv{
         width: 100%;
         height: 30px;
@@ -277,16 +445,182 @@ a{text-decoration:none;font-size:14px}
     }
     .imageArrayMst{
         width: 100%;
-        overflow: hidden;
         margin-top: 15px;
-        justify-items: center;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        height: 1400px;
     }
     .imageArray{
-        width: 300px;
-        display: contents;
+        margin-right: 10px;        
+        margin-bottom: 10px;
+        width: 350px;
+        height: 430px;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 35px;
+        border: 1px solid black;
+        background-color: rgb(247, 248, 244);
+    }    
+    .imageArrayMst >div:nth-of-type(1){
+        left: 0px;
+        position: absolute;
     }
-    .imageArray > img{
+    .imageArrayMst >div:nth-of-type(2){
+        position: absolute;
+        left: 380px;
+    }
+    .imageArrayMst >div:nth-of-type(3){
+        position: absolute;
+        left: 0px;
+        top: 470px;
+    }
+    .imageArrayMst >div:nth-of-type(4){
+        position: absolute;
+        left: 380px;
+        top: 470px;
+    }
+    .imageArrayMst >div:nth-of-type(5){
+        position: absolute;
+        left: 0px;
+        top: 940px;
+    }
+    .imageArrayMst >div:nth-of-type(6){
+        position: absolute;
+        left: 380px;
+        top: 940px;
+    }
+    .bookMarkImage{
+        width: 30px;
+        right: 40px;
+        top: 15px;
+        position: absolute;
+    }
+    .imageArray:hover > .bookMarkImage{
+        width: 30px;
+        right: 40px;
+        top: 15px;
+        position: absolute;
+        content: url(bookMark02.png);
+    }
+    .arrayImage{
         width: 300px;
+        margin-top: 10px;
+        border-radius: 15px;
+    }
+    .imgTitle{
+        font-weight: bold;
+        font-size: 22px;
+    }
+    .imgsubTitle{
+        padding: 8px 15px 0 15px;        
+    }
+    .animationMst{
+        font-size: 25px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .anTitle{
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .animationDtl{
+        justify-content: center;
+    }
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        background-color: rgba(255, 255, 0, 0.7);
+        animation: box-ani 1s infinite; 
+        margin: 0 auto;
+    }    
+    .cardMasterDiv{
+        height: 450px;
+    }
+    .cardMaster{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }.cardMaster .card{
+        position: absolute;
+        width: 120px;
+        height: 160px;
+        border-radius: 8px;
+        background: #5e5cfc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.2);
+        font-size: 6em;
+        font-weight: 700;
+        border: 10px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s;
+        transform-origin: 50% 100%;
+        filter: hue-rotate(calc(var(--i) * 65deg));
+        box-shadow: 0 15pc 50px rgba(0, 0, 0, 0.1);
+    }    
+    .cardMaster:hover .card{
+        transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) * 65px),-50px);
+        color: rgba(0, 0, 0, 0.25);
+        box-shadow: 0 15pc 50px rgba(0, 0, 0, 0.3);
+    }
+    .cardMaster:active .card{
+        background: #333;
+    
+    }
+    .cardMaster .card:active{
+        translate: calc(var(--i)*20px) -50px;
+        z-index: 100;
+        background: #5e5cfc;
+    }
+    @keyframes box-ani {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(50px, 50px); }
+    }    
+    .loading{
+        width: 72px;
+        height: 72px;
+        border: 1px solid black;
+        margin: 0 auto;
+    }
+    .loading__item::before{
+        content: "";
+        width: 50px;
+        height: 50px;
+        background-color: rgb(245, 124, 180);
+        display: inline-block;
+        position:relative;
+        animation: loading 2s infinite cubic-bezier(0, 0, 0.04, 1.21);
+    }
+    @keyframes loading{
+        0%{
+            left: 0;
+            top: 0;
+        }
+        25%{
+            left: 25px;
+            top: 0;
+        }
+        50%{
+            left:25px;
+            top: 25px;
+        }
+        75%{
+            left: 0;
+            top: 25px;
+        }
+        100%{
+            left: 0;
+            top: 0;
+        }
     }
     .footerDiv{
         width: 100%;
@@ -508,19 +842,157 @@ a{text-decoration:none;font-size:14px}
     .textContentDiv >div:nth-of-type(3){
         font-size: 15px;
     }
+    
     .imageArrayMst{
         width: 100%;
-        overflow: hidden;
         margin-top: 15px;
-        display: grid;
-        justify-items: center;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        height: 2850px;
     }
     .imageArray{
         margin-right: 10px;        
         margin-bottom: 10px;
+        width: 600px;
+        height: 460px;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 35px;
+        border: 1px solid black;
+        background-color: rgb(247, 248, 244);
+        position: relative;
+    }    
+    .bookMarkImage{
+        width: 30px;
+        right: 75px;
+        top: 20px;
+        position: absolute;
     }
-    .imageArray > img{
+    .imageArray:hover > .bookMarkImage{
+        width: 30px;
+        right: 75px;
+        top: 20px;
+        position: absolute;
+        content: url(bookMark02.png);
+    }
+    .arrayImage{
         width: 500px;
+        margin-top: 10px;
+        border-radius: 15px;
+    }
+    .imgTitle{
+        font-weight: bold;
+        font-size: 22px;
+    }
+    .imgsubTitle{
+        padding: 8px 15px 0 15px;        
+    }
+    .animationMst{
+        font-size: 25px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .anTitle{
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .animationDtl{
+        justify-content: center;
+    }
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        background-color: rgba(255, 255, 0, 0.7);
+        animation: box-ani 1s infinite; 
+        margin: 0 auto;
+    }    
+    .cardMasterDiv{
+        height: 350px;
+    }
+    .cardMaster{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }.cardMaster .card{
+        position: absolute;
+        width: 120px;
+        height: 160px;
+        border-radius: 8px;
+        background: #5e5cfc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.2);
+        font-size: 4em;
+        font-weight: 700;
+        border: 10px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s;
+        transform-origin: 50% 100%;
+        filter: hue-rotate(calc(var(--i) * 35deg));
+        box-shadow: 0 15pc 50px rgba(0, 0, 0, 0.1);
+    }    
+    .cardMaster:hover .card{
+        transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) * 55px),-50px);
+        color: rgba(0, 0, 0, 0.25);
+        box-shadow: 0 15pc 50px rgba(0, 0, 0, 0.3);
+    }
+    .cardMaster:active .card{
+        background: #333;    
+    }
+    .cardMaster .card:active{
+        translate: calc(var(--i)*20px) -50px;
+        z-index: 100;
+        background: #5e5cfc;
+    }
+    @keyframes box-ani {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(50px, 50px); }
+    }
+    .loading{
+        width: 72px;
+        height: 72px;
+        border: 1px solid black;
+        margin: 0 auto;
+    }
+    .loading__item::before{
+        content: "";
+        width: 50px;
+        height: 50px;
+        background-color: rgb(245, 124, 180);
+        display: inline-block;
+        position:relative;
+        animation: loading 2s infinite cubic-bezier(0, 0, 0.04, 1.21);
+    }
+    @keyframes loading{
+        0%{
+            left: 0;
+            top: 0;
+        }
+        25%{
+            left: 25px;
+            top: 0;
+        }
+        50%{
+            left:25px;
+            top: 25px;
+        }
+        75%{
+            left: 0;
+            top: 25px;
+        }
+        100%{
+            left: 0;
+            top: 0;
+        }
     }
     .footerDiv{
         width: 100%;
